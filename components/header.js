@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Search } from './search'
 
 export const Header = () => {
   return (
@@ -6,7 +7,7 @@ export const Header = () => {
       <Link href="/">
         <a>Home</a>
       </Link>
-
+      <Search />
       <nav>
         <ul>
           <li>

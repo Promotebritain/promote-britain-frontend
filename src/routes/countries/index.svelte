@@ -1,9 +1,18 @@
 <script context="module">
 	export async function load({ fetch }) {
 		const res = await fetch('/countries.json');
-		const { countries } = await res.json();
+		if (res.ok) {
+			const { countries } = await res.json();
+
+			return {
+				props: { countries }
+			};
+		}
+
+		const { message } = await res.json();
+
 		return {
-			props: { countries }
+			error: new Error(message)
 		};
 	}
 </script>
@@ -12,10 +21,10 @@
 	export let countries;
 </script>
 
-{#each countries as { slug, name }}
+{#each countries as { id, slug, name }}
 	<ul>
 		<li>
-			<a href="/countries/{slug}">
+			<a href="/countries/{id}">
 				{name}
 			</a>
 		</li>

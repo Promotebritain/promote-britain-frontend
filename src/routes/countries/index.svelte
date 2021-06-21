@@ -21,12 +21,12 @@
 	export let countries;
 </script>
 
-{#each countries as { id, slug, name }}
-	<ul>
+<ul>
+	{#each countries as { id, slug, name }}
 		<li>
 			<a href="/countries/{id}">
 				{name}
 			</a>
 		</li>
-	</ul>
-{/each}
+	{/each}
+</ul>

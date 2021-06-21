@@ -8,6 +8,10 @@ export async function get(req) {
 			query CountryQuery($id: ID!) {
 				country(id: $id) {
 					name
+					counties {
+						id
+						name
+					}
 				}
 			}
 		`;

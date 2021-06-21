@@ -19,6 +19,15 @@
 
 <script>
 	export let county;
+	let { companies, name } = county;
 </script>
 
-{county.name}
+<h1 class="text-5xl">
+	{name}
+</h1>
+
+<ul>
+	{#each companies as { id, name }}
+		<li><a href="/companies/{id}">{name}</a></li>
+	{/each}
+</ul>

@@ -1,24 +1,24 @@
 <script context="module">
-	export async function load({ fetch, page }) {
-		const res = await fetch(`/companies/${page.params.id}.json`);
-		if (res.ok) {
-			const { company } = await res.json();
+  export async function load({ fetch, page }) {
+    const res = await fetch(`/companies/${page.params.id}.json`)
+    if (res.ok) {
+      const { company } = await res.json()
 
-			return {
-				props: { company }
-			};
-		}
+      return {
+        props: { company },
+      }
+    }
 
-		const { message } = await res.json();
+    const { message } = await res.json()
 
-		return {
-			error: new Error(message)
-		};
-	}
+    return {
+      error: new Error(message),
+    }
+  }
 </script>
 
 <script>
-	export let company;
+  export let company
 </script>
 
 {company.name}

@@ -1,32 +1,32 @@
-import { strapiClient } from '$lib/graphql-client';
-import { gql } from 'graphql-request';
+import { strapiClient } from '$lib/graphql-client'
+import { gql } from 'graphql-request'
 
 export async function get(_req) {
-	try {
-		const { counties } = await strapiClient.request(gql`
-			{
-				counties {
-					id
-					name
-					slug
-				}
-			}
-		`);
+  try {
+    const { counties } = await strapiClient.request(gql`
+      {
+        counties {
+          id
+          name
+          slug
+        }
+      }
+    `)
 
-		return {
-			status: 200,
-			body: {
-				counties
-			}
-		};
-	} catch (error) {
-		return {
-			status: 500,
-			body: {
-				error: 'A server error occurred'
-			}
-		};
-	}
+    return {
+      status: 200,
+      body: {
+        counties,
+      },
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      body: {
+        error: 'A server error occurred',
+      },
+    }
+  }
 }
 
 // other CRUDs

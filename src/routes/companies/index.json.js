@@ -8,7 +8,6 @@ export async function get(_req) {
         companies {
           id
           name
-          slug
           image {
             width
             height

@@ -6,6 +6,7 @@ export async function get(_req) {
     const search = await strapiClient.request(gql`
       {
         countries {
+          __typename
           id
           slug
           name
@@ -19,11 +20,13 @@ export async function get(_req) {
           }
         }
         counties {
+          __typename
           id
           name
           slug
         }
         companies {
+          __typename
           id
           name
           image {
@@ -40,7 +43,6 @@ export async function get(_req) {
             name
           }
           countries {
-            id
             name
           }
         }

@@ -44,8 +44,15 @@
 <input type="text" bind:value={query} />
 
 {#each results as result}
-  <p>
-    {result.item.name}
-  </p>
-  <pre>{JSON.stringify(result, null, 2)}</pre>
+  <ul>
+    <li>
+      <a
+        href={`${result.item.__typename.toLowerCase()}/${
+          result.item.id
+        }`}
+      >
+        {result.item.name}
+      </a>
+    </li>
+  </ul>
 {/each}

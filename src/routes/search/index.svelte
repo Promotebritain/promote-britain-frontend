@@ -23,8 +23,15 @@
   export let search
   let { countries, counties, companies } = search
   let options = {
-    keys: ['name'],
+    keys: [
+      'name',
+      'county.name',
+      'companies.name',
+      'companies.description',
+    ],
     includeScore: true,
+    includeMatches: true,
+    threshold: 0.2,
   }
   let fuse = new Fuse(
     [...countries, ...counties, ...companies],
@@ -37,5 +44,8 @@
 <input type="text" bind:value={query} />
 
 {#each results as result}
-  {result.item.name}
+  <p>
+    {result.item.name}
+  </p>
+  <pre>{JSON.stringify(result, null, 2)}</pre>
 {/each}

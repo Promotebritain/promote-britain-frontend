@@ -17,7 +17,7 @@ export async function get(_req) {
           url
           phone
           description
-          county {
+          counties {
             id
             name
           }

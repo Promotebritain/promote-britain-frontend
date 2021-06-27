@@ -9,7 +9,7 @@
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. .",
     "clean": "rm -rf .svelte build",
-    "start": "env-cmd svelte-kit start"
+    "start": "env-cmd svelte-kit start --host -p 10000"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^1.0.0-next.29",

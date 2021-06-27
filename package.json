@@ -8,11 +8,10 @@
     "preview": "env-cmd svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "clean": "rm -rf .svelte build",
-    "start": "env-cmd svelte-kit start --https 0.0.0.0"
+    "clean": "rm -rf .svelte build"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "^1.0.0-next.29",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.2.6",
     "cssnano": "^5.0.6",

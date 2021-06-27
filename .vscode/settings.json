@@ -1,4 +1,6 @@
 {
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#FF2C70",
     "titleBar.inactiveBackground": "#FF2C70CC"

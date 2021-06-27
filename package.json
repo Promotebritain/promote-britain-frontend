@@ -5,24 +5,26 @@
   "scripts": {
     "dev": "env-cmd svelte-kit dev",
     "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
+    "preview": "env-cmd svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "clean": "rm -rf .svelte build"
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
     "@sveltejs/kit": "next",
-    "autoprefixer": "^10.2.5",
-    "cssnano": "^5.0.2",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.6",
     "env-cmd": "^10.1.0",
     "fuse.js": "^6.4.6",
     "graphql": "^15.5.1",
     "graphql-request": "^3.4.0",
-    "postcss": "^8.2.13",
-    "postcss-load-config": "^3.0.1",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
+    "postcss": "^8.3.5",
+    "postcss-load-config": "^3.1.0",
+    "prettier": "~2.3.2",
+    "prettier-plugin-svelte": "^2.3.1",
+    "svelte": "^3.38.3",
     "svelte-preprocess": "^4.7.3",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.2.4"
   }
 }

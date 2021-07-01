@@ -42,9 +42,6 @@ export async function get(_req) {
             id
             name
           }
-          countries {
-            name
-          }
         }
       }
     `)

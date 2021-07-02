@@ -1,4 +1,5 @@
 <script>
+  import Footer from '$lib/footer.svelte'
   import Nav from '$lib/nav.svelte'
   import '../app.postcss'
 </script>
@@ -9,4 +10,5 @@
   <main class="">
     <slot />
   </main>
+  <Footer />
 </div>

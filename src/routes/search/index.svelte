@@ -41,7 +41,7 @@
   $: results = fuse.search(query)
 </script>
 
-<input type="text" bind:value={query} />
+<input type="text" bind:value={query} class="border" />
 
 {#each results as result}
   <ul>
